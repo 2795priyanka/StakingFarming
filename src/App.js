@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/style.css'
 import Main from './components/Main';
 import Staking from './components/Staking'
+import UnStaking from './components/UnStaking';
 import {
   BrowserRouter,
   Routes,
@@ -15,12 +16,12 @@ function App() {
    <BrowserRouter>
    <Routes>
      <Route path="/" element={<Main />} />
-     <Route path="/staking" element={<Staking />} />
-     
+     <Route path="/stake" element={<Staking />} />
+     <Route path="/unStake" element={<UnStaking />} />
    </Routes>
  </BrowserRouter>
   )
 }
 
 export default App
-//  basename='/stacking_farming/'
+//  basename='/staking_farming/'

@@ -13,8 +13,8 @@ function Footer() {
                         <div className="stake_network">
                             <div className="head">Stake Network</div>
                                 <div className='mt-3'>
-                                <p><a href="/" className='stakeLink'>Stake Token 1 (BTC)</a></p>
-                                <p><a href="/" className='stakeLink'>Stake Token 2 (BTC)</a></p>
+                                <p><a href="#" className='stakeLink'>Stake Token 1 (BTC)</a></p>
+                                <p><a href="#" className='stakeLink'>Stake Token 2 (BTC)</a></p>
                              
                                 </div>
                         </div>
@@ -36,10 +36,10 @@ function Footer() {
                             <div className="head">Follow Us</div>
                             <div className="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit a mollitia nemo, quis reiciendis nisi atque, ut sed deleniti esse quam beatae ullam adipisci et ipsum dolorem. Possimus, veniam natus.</div>
                             <div className="socialLinks">
-                                <div className='links'><a href="/"><FaFacebookF  className='icon' /></a></div>
-                                <div className='links'><a href="/"><AiFillInstagram  className='icon' /></a></div>
-                                <div className='links'><a href="/"><BsTwitter className='icon' /></a></div>
-                                <div className='links'><a href="/"><BsYoutube className='icon' /></a></div>
+                                <div className='links'><a href="#"><FaFacebookF  className='icon' /></a></div>
+                                <div className='links'><a href="#"><AiFillInstagram  className='icon' /></a></div>
+                                <div className='links'><a href="#"><BsTwitter className='icon' /></a></div>
+                                <div className='links'><a href="#"><BsYoutube className='icon' /></a></div>
                             </div>
                         </div>
                     </Col>
@@ -56,8 +56,8 @@ function Footer() {
                     </Col>
                     <Col lg={5} md={5}>
                         <div className='bottom_footer_right'>
-                            <p><a href="/">Privacy Policy</a></p>
-                            <p><a href="/">Terms</a></p>
+                            <p><a href="#">Privacy Policy</a></p>
+                            <p><a href="#">Terms</a></p>
                         </div>
                     </Col>
                 </Row>

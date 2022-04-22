@@ -6,7 +6,7 @@ function LayerCard(props) {
         <>
            
                     <Col lg={3} md={4} className="py-4 stake_layer">
-                        <Link to="/staking">
+                        <Link to="/stake">
                         <div className="layerCard_section">
                             <div className="token_label">Testnet</div>
                             <div className="token_name">{props.token}</div>

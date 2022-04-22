@@ -4,13 +4,13 @@ import StakeHeader from '../common/StakeHeader'
 import Footer from '../common/Footer'
 import { BiHelpCircle } from 'react-icons/bi'
 function Staking() {
+    const [stakeType, setStakeType] = useState("")
+    const [amount, setAmount] = useState(" ")
 
-    function show1() {
-        document.getElementById('selected').style.display = 'none';
+    const onRadioChange = (e)=>{
+        setStakeType(e.target.value)
     }
-    function show2() {
-        document.getElementById('selected').style.display = 'block';
-    }
+
     return (
         <>
             <StakeHeader />
@@ -29,7 +29,7 @@ function Staking() {
                                                    type="radio" 
                                                    value="lock"
                                                    name="stakeType"
-                                                   onClick={show1} 
+                                                   onChange={onRadioChange} 
                                             />
                                             <label className="form-check-label">
                                                 Lock
@@ -40,7 +40,7 @@ function Staking() {
                                                    type="radio" 
                                                    value = "unlock"
                                                    name="stakeType"
-                                                   onClick={show2} 
+                                                   onChange={onRadioChange} 
                                             />
                                             <label className="form-check-label">
                                                 Unlock
@@ -50,11 +50,11 @@ function Staking() {
                                     </div>
 
                                     <div className="amount_div">
-                                        <input type="text" className='form-control' placeholder='Enter Amount' />
+                                        <input type="text" className='form-control' placeholder='Enter Amount'  pattern="[0-9]*" onChange={(e)=>setAmount(e.target.value)} />
                                         <div className="max_div">Max</div>
                                     </div>
-
-                                    <div className="month_dropdown mt-4" id='selected' style={{display:"none"}}>
+                                    {stakeType === "unlock" ?   
+                                     <div className="month_dropdown mt-4">
                                         <Form.Select aria-label="Default select example">
                                             <option>Select Stake Duration</option>
                                             <option value="">1 Month</option>
@@ -62,6 +62,9 @@ function Staking() {
                                             <option value="">12 Month</option>
                                         </Form.Select>
                                     </div>
+                                     : " " }
+
+                                 
                                      
                                     
 
@@ -100,7 +103,7 @@ function Staking() {
                             <Col lg={6} md={7}>
                                 <div className="head">
                                     <div className="statistics_title">Statistics</div>
-                                    <div className="view_bscScan"><a href="/">View on BSCscan</a></div>
+                                    <div className="view_bscScan"><a href="#">View on BSCscan</a></div>
                                 </div>
                                 <div className="statistics_container">
                                     <div className="token_details">

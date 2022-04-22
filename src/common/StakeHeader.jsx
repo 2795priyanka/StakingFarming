@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, Navbar, Nav} from 'react-bootstrap'
-
+import {Link} from 'react-router-dom'
 function StakeHeader() {
     return (
         <>
@@ -10,12 +10,12 @@ function StakeHeader() {
                         <Col lg={12} md={12} className="px-0">
                             <Navbar collapseOnSelect expand="lg"  >
                                 <Container>
-                                    <Navbar.Brand to="/staking">STAKING <br></br> FARMING</Navbar.Brand>
+                                    <Navbar.Brand><Link to="/" className='stakeLogo'>STAKING <br></br> FARMING</Link></Navbar.Brand>
                                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                                     <Navbar.Collapse id="responsive-navbar-nav">
                                         <Nav className="m-auto">
-                                            <Nav.Link to="/staking">Stake</Nav.Link>
-                                            <Nav.Link to="/staking">Unstake</Nav.Link>
+                                            <Nav.Link ><Link to="/stake">Stake</Link></Nav.Link>
+                                            <Nav.Link ><Link to="/unStake">Unstake</Link></Nav.Link>
                                             <Nav.Link to="/staking">Reward</Nav.Link>
                                             
                                         </Nav>
