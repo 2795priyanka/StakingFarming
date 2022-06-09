@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { Container, Row, Col, Navbar, Nav, Modal, Dropdown, NavItem, NavLink } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Web3 from "web3";
+import gochart from '../assets/images/gochart.png'
+import crypto from '../assets/images/crypto.png'
+import gochart_white from '../assets/images/gochart_white.png'
+import crypto_white from '../assets/images/crypto_white.png'
 const web3_Stake = new Web3(window.ethereum);
 function StakeHeader() {
     // ========modal show=======
@@ -198,7 +202,10 @@ function StakeHeader() {
                         <Col lg={12} md={12} className="px-0">
                             <Navbar collapseOnSelect expand="lg"  >
                                 <Container>
-                                    <Navbar.Brand><Link to="/" className='stakeLogo'>STAKING <br></br> FARMING</Link></Navbar.Brand>
+                                    <Navbar.Brand><Link to="/" className='stakeLogo'>
+                                    <img src={crypto_white} alt="logo" className='img-fluid' style={{ width: "60px" }} />
+                                        <img src={gochart_white} alt="logo" className='img-fluid' style={{ width: "60px", marginLeft: "-10px" }} />
+                                        </Link></Navbar.Brand>
                                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                                     <Navbar.Collapse id="responsive-navbar-nav">
                                         <Nav className="m-auto">
@@ -206,8 +213,8 @@ function StakeHeader() {
                                             <Dropdown as={NavItem}>
                                                 <Dropdown.Toggle as={NavLink}>Stake</Dropdown.Toggle>
                                                 <Dropdown.Menu>
-                                                    <Link className='dropdown-item' to="/stakeToken1"> GoStake </Link>
-                                                    <Link className='dropdown-item' to="/stakeToken2"> GoBuy </Link>
+                                                    <Link className='dropdown-item' to="/stakeToken1">  <img src={gochart} alt="logo" className='img-fluid' style={{ width: "50px", borderRadius:"50%" }} />&nbsp;&nbsp;GoStake </Link>
+                                                    <Link className='dropdown-item' to="/stakeToken2"><img src={crypto} alt="logo" className='img-fluid' style={{ width: "50px", borderRadius:"50%" }} />&nbsp;&nbsp;GoBuy </Link>
                                                 </Dropdown.Menu>
                                             </Dropdown>
                                             <Nav.Link ><Link to="/unStake">Unstake</Link></Nav.Link>
